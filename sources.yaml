@@ -1,3 +1,15 @@
 ---
-github: []
-kubernetes: []
+github:
+  - tag: v2.4.0
+    owner: fluxcd
+    repo: flux2
+    assets:
+      - install.yaml
+  - tag: v1.17.0
+    owner: cilium
+    repo: cilium
+    dirs:
+      - pkg/k8s/apis/cilium.io/client/crds/v2
+      - pkg/k8s/apis/cilium.io/client/crds/v2alpha1
+kubernetes:
+  - version: v1.32.1
