@@ -1,0 +1,12 @@
+---
+version: '3'
+vars:
+  DAGGER_MODULE: github.com/piwaka/daggerverse/cue-schemas
+  SOURCES_YAML: sources.yaml
+tasks:
+  export:
+    desc: Exports the schemas from sources.yaml
+    cmds:
+      - |
+        dagger -m {{.DAGGER_MODULE}} call export --file {{.SOURCES_YAML}} \
+        export --path crds
